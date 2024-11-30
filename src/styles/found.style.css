@@ -1,0 +1,13 @@
+
+.found-books-container{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.book-not-found{
+    width: 100%;
+    text-align: center;
+}
