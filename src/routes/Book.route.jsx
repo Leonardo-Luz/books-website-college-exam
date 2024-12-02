@@ -5,13 +5,15 @@ import { MyList } from "../service/myList.service"
 export const Book = () => {
     const { id } = useParams()
 
-    return(
+    return (
         <>
             <h1>Detalhes do Livro</h1>
             {
-                <BookCard  book={MyList.getBook(id)} />
+                MyList.getBook(id) ?
+                    <BookCard book={MyList.getBook(id)} /> :
+                    <h1>Livro não encontrado!</h1>
             }
-            <Link to={-1}>Voltar</Link>        
+            <Link to={-1}>Voltar</Link>
         </>
     )
 }
